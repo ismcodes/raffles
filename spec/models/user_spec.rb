@@ -2,7 +2,6 @@ require 'spec_helper'
 describe User do
 	User.delete_all
 	it 'should create its own password hash from given password' do
-		5.times { puts User.count }
 		u=User.new(email:"aabbccdd",username:"aabbccdd",password_hash:"hi")
 		expect(u.password_hash).to eq "hi"
 		u.save
