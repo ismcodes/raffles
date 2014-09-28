@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  post 'sign_in', to: "sessions#sign_in"
   get 'sign_in', to: "sessions#create"
   get '/', to: 'sessions#home'
-
+  post '/authenticate', to: 'sessions#attempt_authentication'
+  get '/sign_out', to: 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :raffles

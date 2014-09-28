@@ -1,1 +1,14 @@
 all raffles
+<%if session[:user_id]%>
+<%Raffle.find_each do |r|%>
+	<a href="raffles/<%=r.id%>"><div class="raffle"><span><%=r.product.name%></span>
+		$<%=r.product.price/100%>.<%=r.product.price%100%>
+		<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="<%=r.product.name%>"
+          data-amount="<%=r.product.price%>"></script>
+	</div></a>
+<%end%>
+<%else%>
+<a href="sign_in">Sign in</a> to view raffles!
+<%end%>

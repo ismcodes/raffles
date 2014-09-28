@@ -6,9 +6,11 @@ feature 'Raffle page shows the raffles' do
 	end
 
 	scenario 'when signed in' do
+		r=Raffle.create
+		r.product=Product.new(name:"expectcss", price:1)
 		page.set_rack_session(user_id:1)
 		visit '/raffles'
-		expect
+		expect(page).to have_css('.raffle')
 		page.set_rack_session(user_id:nil)
 	end
 

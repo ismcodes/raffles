@@ -8,10 +8,10 @@
 </head>
 <body>
 <%if session[:user_id]%>
-<a href="http://localhost:3000/sign_out" class="sign_out">sign out</a>
+<a href="sign_out" class="sign_out">sign out</a>
 <button id="enter">hello</button>
 <%else%>
-<a href="http://localhost:3000/sign_in" class="sign_in">sign in</a>
+<a href="sign_in" class="sign_in">sign in</a>
 <%end%>
 <%= yield %>
 
