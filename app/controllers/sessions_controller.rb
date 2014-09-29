@@ -5,11 +5,6 @@ skip_before_action :verify_authenticity_token
   	# render json:false
   	usr=params[:username]
   	pw=params[:password]
-    puts '--'
-    puts params
-    puts '---'
-    puts User.first.username
-
   	u=User.where(username:usr)
   	if u.empty?
   		redirect_to '/sign_in?incorrect=1'
