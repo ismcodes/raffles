@@ -4,9 +4,10 @@ feature 'Raffles/:id shows the raffle' do
 		r=Raffle.create
 		r.product=Product.new(name:"filler", price:0)
 		visit "/raffles/#{r.id}"
-		expect(page).not_to have_css('.stripe-button')
-		expect(page).not_to have_content '$'
-		expect(page).not_to have_content 'Ends on'
+		expect(page).not_to have_content("filler")
+		expect(page).to have_css(".username")
+		expect(page).to have_css("input[type='password']")
+
 	end
 	scenario 'when signed in' do
 		page.set_rack_session(user_id:1)

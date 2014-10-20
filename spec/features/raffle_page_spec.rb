@@ -3,6 +3,8 @@ feature 'Raffle page shows the raffles' do
 	scenario 'when not signed in' do
 		visit '/raffles'
 		expect(page).not_to have_content 'Enter'
+		expect(page).to have_css(".username")
+		expect(page).to have_css("input[type='password']")
 	end
 
 	scenario 'when signed in' do

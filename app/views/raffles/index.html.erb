@@ -1,5 +1,4 @@
 all raffles
-<%if session[:user_id]%>
 <%Raffle.find_each do |r|%>
 	<a href="raffles/<%=r.id%>"><div class="raffle"><span><%=r.product.name%></span>
 		$<%=r.product.price/100%>.<%=r.product.price%100%>
@@ -8,7 +7,4 @@ all raffles
           data-description="<%=r.product.name%>"
           data-amount="<%=r.product.price%>"></script>
 	</div></a>
-<%end%>
-<%else%>
-<%=render "need_to_sign_in"%>
 <%end%>
