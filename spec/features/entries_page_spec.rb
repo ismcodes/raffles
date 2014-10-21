@@ -9,9 +9,11 @@ feature "/entries shows all the user's charges" do
 	scenario 'when signed in' do
 		User.delete_all
 		u=User.create(username:"entries",email:"entries@entries.com",password_hash:"entry")
-		u.entries<<Entry.new
-		u.entries.first.raffle=Raffle.create
+		u.entries<<Entry.create
+		u.entries.first.update_attribute(:raffle,Raffle.create)
+		#RSpec didn't like it when I had simply .raffle=Raffle.create... took a while to figure out
 		u.entries.first.raffle.product=Product.create(name:"Example Product", price:0)
+		
 		page.set_rack_session(user_id:u.id)
 		visit '/entries'
 		#should show some charges... look up the proper way to store Stripe charges later

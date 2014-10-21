@@ -30,6 +30,7 @@ gem 'minitest'
 gem 'rspec-rails', '~> 2.8'
 gem 'capybara'
 gem 'rack_session_access'
+gem 'pry'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
