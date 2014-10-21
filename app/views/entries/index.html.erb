@@ -1,11 +1,8 @@
-<%if session[:user_id]%>
-<%User.find(session[:user_id]).entries.each do |entry|%>
+
+<%@user.entries.each do |entry|%>
 <div class="charge">
 <%=entry.raffle.product.name%>
 $<%=entry.raffle.product.price/100%>.<%=entry.raffle.product.price%100%>
 <%=entry.raffle.created_at%>
 </div>
-<%end%>
-<%else%>
-Sign in :(
 <%end%>
