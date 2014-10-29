@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -24,13 +23,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'bcrypt'
+gem 'payola-payments'
 
 group :development, :test do
 gem 'minitest'
 gem 'rspec-rails', '~> 2.8'
 gem 'capybara'
 gem 'rack_session_access'
-gem 'pry'
+# gem 'pry'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

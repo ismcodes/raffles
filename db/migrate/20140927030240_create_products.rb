@@ -4,6 +4,7 @@ class CreateProducts < ActiveRecord::Migration
     	t.belongs_to :raffle
     	t.string :name
     	t.integer :price
+    	t.string :permalink
       t.timestamps
     end
   end

@@ -17,5 +17,7 @@ class User < ActiveRecord::Base
 	
 	def create_registration
 		self.registration=Registration.new
+		# self.registration.send_mail
+		# should it automatically send mail on create?
 	end
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Payola::Engine => '/payola', as: :payola
   get 'sign_in', to: "sessions#create"
   get '/', to: 'sessions#home'
   post '/authenticate', to: 'sessions#attempt_authentication'
