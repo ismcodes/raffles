@@ -14,7 +14,6 @@ feature 'Raffle page shows the raffles' do
 		page.set_rack_session(user_id:1)
 		visit '/raffles'
 		expect(page).to have_css('.raffle')
-		page.set_rack_session(user_id:nil)
 	end
 
 end
