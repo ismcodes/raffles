@@ -4,13 +4,15 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 section.container{
-@include outer-container;
-@include span-columns(3);
-@include omega(4n);
+	@include outer-container;
 }
-.block{
-
-  
-  width:100px;
-  height:50px;
+.raffle{
+ @include span-columns(3);
+ @include omega(4n);
+ background-color: aliceblue;
+ height:100px;
+}
+.raffle-pic{
+	height:50px;
+	width:100px;
 }

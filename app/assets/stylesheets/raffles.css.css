@@ -6,22 +6,26 @@
 section.container {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
+  margin-right: auto; }
   section.container:after {
     content: "";
     display: table;
     clear: both; }
-  section.container:last-child {
+
+.raffle {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  background-color: aliceblue;
+  height: 100px; }
+  .raffle:last-child {
     margin-right: 0; }
-  section.container:nth-child(4n) {
+  .raffle:nth-child(4n) {
     margin-right: 0; }
-  section.container:nth-child(4n+1) {
+  .raffle:nth-child(4n+1) {
     clear: left; }
 
-.block {
-  width: 100px;
-  height: 50px; }
+.raffle-pic {
+  height: 50px;
+  width: 100px; }

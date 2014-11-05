@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
     	t.string :name
     	t.integer :price
     	t.string :permalink
+    	t.string :description
       t.timestamps
     end
   end

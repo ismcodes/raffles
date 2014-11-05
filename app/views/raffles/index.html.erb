@@ -5,8 +5,15 @@ all raffles
 <section class="container">
 <%Raffle.find_each do |r|%>
 	<% next unless r.product %>
-	<a href="raffles/<%=r.id%>"><div class="raffle block"><%=r.product.name%>
-		$<%=r.product.price/100%><%if r.product.price%100!=0%>.<%=r.product.price%100%><%end%>
-	</div></a>
+	<div class="raffle">
+		<a href="raffles/<%=r.id%>" style="text-decoration:none;">
+			<center><%=r.product.name%>
+			 <br/>
+			 $<%=r.product.price/100%><%if r.product.price%100!=0%>.<%=r.product.price%100%><%end%>
+			 <br/>
+			 <img class="raffle-pic" src="capybara.jpg">
+			</center>
+		</a>
+	</div>
 <%end%>
 </section>
